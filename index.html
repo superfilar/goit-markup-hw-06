@@ -16,11 +16,61 @@
   <body>
     <div class="modal is-hidden" data-modal>
       <div class="modal-window">
+        <!--przycisk zamykania okna moadlnego-->
         <button class="modal-window-close" data-modal-close>
           <svg width="11px" height="11px">
             <use href="./images/icons.svg#icon-close-button"></use>
           </svg>
         </button>
+        <!--formularz w oknie modalnym-->
+        <div class="form-modal">
+          <h2>Zostaw swoje dane w formularzu poniżej</h2>
+          <form name="order_form" id="form_modal" action="">
+          <ul>
+            <li><!--Imie form-modal-->
+            <label for="username">
+              Imie
+              <div class="input-form-modal">
+               <svg width="12px" height="12px">
+                <use href="./images/icons.svg#icon-name_icon_modal">
+                </use>
+                </svg><input type="text" name="username"/>
+                </div>
+            </label>
+          </li>
+            <li><!--Numer telefonu form-modal-->
+              <label for="phone-number">Telefon
+                <div class="input-form-modal">
+          <svg width="13px" height="13px">
+                <use href="./images/icons.svg#icon-phone_icon_modal"></use>
+          </svg>
+          <input type="text" name="phone-number"/>
+          </div></label>
+        </li>
+            <li><!--E-mail form-modal-->
+              <label for="email">Email
+                <div class="input-form-modal">
+          <svg width="15px" height="12px">
+                <use href="./images/icons.svg#icon-email_icon_modal"></use>
+          </svg>
+          <input type="text" name="email"/>
+          </div>
+        </label>
+            </li>
+            <li><!--Komentarz form-modal-->
+              <label for="user-description">Komentarz
+         <textarea name="user-description" id="user-description" cols="30" rows="10" placeholder="Wprowadź tekst"></textarea>
+         </label>
+          </li>
+          </ul><!--Checkbox i zgoda Regulaminu form-modal-->
+          <div class="modal-agreement">
+            <input name="checkbox" id="checkbox" type="checkbox">
+          </input>
+            <p>Oświadczam iż akceptuję <a href="">Regulamin</a> i <a href="">Politykę Prywatności.</a></p>
+          </div>
+          <button type="submit">Wyślij</button>
+          </form>
+        </div>
       </div>
     </div>
     <header>
@@ -498,7 +548,7 @@
             <p class="contact-bottom-tel">+48 111 111 111</p>
           </address>
         </div>
-        <div class="footer-right">
+        <div class="footer-middle">
           <p>DOŁĄCZ DO NAS</p>
           <ul class="socials-in-footer">
             <li>
@@ -522,6 +572,20 @@
               </svg>
             </li>
           </ul>
+        </div>
+        <div class="footer-right">
+          <form name="form-footer" action="">
+            <label id="email-newsletter" for="email-newsletter">ZAPISZ SIĘ DO NEWSLETTERA</label>
+            <div class="form-footer">
+              <input type="email" text="E-mail" name="email-newsletter" placeholder="E-mail"/>
+            
+            <button type="submit" name="email-newsletter">
+              <p>Zapisz się</p>
+              <svg width="24px" height="24px">
+                <use href="./images/icons.svg#icon-send_icon_footer"></use>
+              </svg>
+            </button></div>
+          </form>
         </div>
       </div>
     </footer>
