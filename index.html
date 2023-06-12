@@ -25,7 +25,7 @@
         <!--formularz w oknie modalnym-->
         <div class="form-modal">
           <h2>Zostaw swoje dane w formularzu poniżej</h2>
-          <form name="order_form" id="form_modal" action="">
+          <form name="order_form" id="form_modal">
           <ul>
             <li><!--Imie form-modal-->
             <label for="username">
@@ -34,7 +34,7 @@
                <svg width="12px" height="12px">
                 <use href="./images/icons.svg#icon-name_icon_modal">
                 </use>
-                </svg><input type="text" name="username"/>
+                </svg><input type="text" id="username" name="username"/>
                 </div>
             </label>
           </li>
@@ -44,7 +44,7 @@
           <svg width="13px" height="13px">
                 <use href="./images/icons.svg#icon-phone_icon_modal"></use>
           </svg>
-          <input type="text" name="phone-number"/>
+          <input type="text" id="phone-number" name="phone-number"/>
           </div></label>
         </li>
             <li><!--E-mail form-modal-->
@@ -53,7 +53,7 @@
           <svg width="15px" height="12px">
                 <use href="./images/icons.svg#icon-email_icon_modal"></use>
           </svg>
-          <input type="text" name="email"/>
+          <input type="text" id="email" name="email"/>
           </div>
         </label>
             </li>
@@ -63,11 +63,16 @@
          </label>
           </li>
           </ul><!--Checkbox i zgoda Regulaminu form-modal-->
-          <div class="modal-agreement">
-            <input name="checkbox" id="checkbox" type="checkbox">
-          </input>
-            <p>Oświadczam iż akceptuję <a href="">Regulamin</a> i <a href="">Politykę Prywatności.</a></p>
-          </div>
+          <label for="checkbox" class="modal-agreement">
+              <input name="checkbox" id="checkbox" type="checkbox">
+              <div class="checkbox-icon">
+              <svg width="11px" height="8px">
+                <use href="./images/icons.svg#icon-checkbox_modal"></use>
+              </svg>
+            </div>
+            </input>
+            <span class="agreement">Oświadczam iż akceptuję <a href="">Regulamin</a> i <a href="">Politykę Prywatności.</a></span>
+        </label>
           <button type="submit">Wyślij</button>
           </form>
         </div>
@@ -574,11 +579,11 @@
           </ul>
         </div>
         <div class="footer-right">
-          <form name="form-footer" action="">
-            <label id="email-newsletter" for="email-newsletter">ZAPISZ SIĘ DO NEWSLETTERA</label>
+          <form name="form-footer">
+            <label for="email-newsletter">ZAPISZ SIĘ DO NEWSLETTERA
             <div class="form-footer">
-              <input type="email" text="E-mail" name="email-newsletter" placeholder="E-mail"/>
-            
+              <input type="email" id="email" text="E-mail" name="email-newsletter" placeholder="E-mail"/>
+            </label>
             <button type="submit" name="email-newsletter">
               <p>Zapisz się</p>
               <svg width="24px" height="24px">
